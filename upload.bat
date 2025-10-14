@@ -3,7 +3,7 @@
 setlocal
 
 :: Chemin du dossier local
-set LOCAL_PATH="C:\Users\Tsuki\Desktop\Cours\TFE\tfe-informatique\multimedia"
+set LOCAL_PATH="C:\Users\Tsuki\Desktop\Cours\TFE\multimedia"
 
 :: Identifiants du serveur distant
 set REMOTE_USER=mouyart
