@@ -5,88 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="images/logo.ico">
-    <title>Rethro Pi | Home</title>
-    <style>
-    .navbar {
-        background-color: #0ba6ff;
-        padding: 13px;
-        display: flex;
-        color: white;
-        margin: -8px;
-    }
-
-    .navbar a {
-        color: white;
-        text-decoration: none;
-        margin: 0 15px;
-        position: relative;
-    }
-
-    .navbar a i {
-        font-size: 20px;
-        transition: transform 0.2s;
-    }
-
-    .navbar a .hidden_text {
-        opacity: 0;
-        visibility: hidden;
-        position: absolute;
-        top: 25px;
-        left: 50%;
-        transform: translateX(-50%) scale(0.9);
-        transition: all 0.3s ease;
-        white-space: nowrap;
-    }
-
-    .navbar a:hover .hidden_text {
-        opacity: 1;
-        visibility: visible;
-        transform: translateX(-50%) scale(1);
-        text-decoration: underline;
-    }
-
-    .navbar a:hover i {
-        transform: scale(1.1);
-    }
-
-
-    .navbar .links {
-        margin-left: auto;
-        display: flex;
-        align-items: center;
-    }
-
-    .logo {
-        width: 50px;
-        height: auto;
-        margin: 10px;
-    }
-
-    .separateur img{
-        width: 117%;
-        margin: -10px;
-        margin-left: -49px;
-        margin-right: -49px;
-    }
-
-    .main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-    }
-
-    .footer {
-        background-color: #0ba6ff;
-        color: white;
-        text-align: center;
-        padding: 10px;
-        position: relative;
-        bottom: 0;
-        width: 100%;
-        margin: -10px;
-    }
-    </style>
+    <link rel="stylesheet" href="css/index.css">
+    <title>Rethro Pi | Accueil</title>
 </head>
 <body>
     <div class="navbar">
@@ -98,12 +18,12 @@
             <a href="about.php"><i class="fa-solid fa-info-circle icon"></i> <span class="hidden_text">À propos de nous</span></a>
             <a href="contact.php"><i class="fa-solid fa-envelope icon"></i> <span class="hidden_text">Contact</span></a>
             <a href="cart.php"><i class="fa-solid fa-shopping-cart icon"></i> <span class="hidden_text">Panier</span></a>
-            <a href="login.php"><i class="fa-solid fa-user icon"></i> <span class="hidden_text">Connexion</span></a>
+            <a href="php/login.php"><i class="fa-solid fa-user icon"></i> <span class="hidden_text">Connexion</span></a>
         </div>
     </div>
     <div class="separateur">
         <figure>
-            <img src="images/separateur_bleu.png" alt="">
+            <img src="images/separateur_mauve_top.png" alt="">
         </figure>
     </div>
     <div class="main">
@@ -122,7 +42,7 @@
     </div>
     <div class="separateur">
         <figure>
-            <img src="images/separateur_bleu_botom.png" alt="">
+            <img src="images/separateur_mauve_botom.png" alt="">
         </figure>
     </div>
     <div class="footer">

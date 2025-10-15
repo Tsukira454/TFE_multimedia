@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;	
+	font-family: Raleway, sans-serif;
+}
+
+body {
+	background: linear-gradient(90deg, #C7C5F4, #776BCC);		
+}
+
+.images-top .images-bottom figure img {
+	width: 80%;
+	height: auto;
+	margin-bottom: -7px;
+}
+
+.images-bottom figure img {
+	bottom: 0;
+	width: 100%;
+	margin-bottom: -5px;
+}
+
+.container {
+	width: 100%;
+	max-width: 400px;
+	margin: 80px auto;
+	padding: 20px;
+	background: linear-gradient(90deg, #C7C5F4, #776BCC);
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	margin-top: -70px;
+}
+
+.titre {
+	text-align: center;
+	color: #fff;
+}
+
+.log_reg {
+	width: 320px;
+	padding: 30px;
+}
+
+.log_reg__field {
+	padding: 20px 0px;	
+	position: relative;	
+}
+
+.log_reg__icon {
+	position: absolute;
+	top: 30px;
+	color: #7875B5;
+}
+
+.log_reg__input {
+	border: none;
+	border-bottom: 2px solid #D1D1D4;
+	background: none;
+	padding: 10px;
+	padding-left: 24px;
+	font-weight: 700;
+	width: 75%;
+	transition: .2s;
+}
+
+.log_reg__input:active,
+.log_reg__input:focus,
+.log_reg__input:hover {
+	outline: none;
+	border-bottom-color: #6A679E;
+}
+
+.log_reg__submit {
+	background: #fff;
+	font-size: 14px;
+	margin-top: 30px;
+	padding: 16px 20px;
+	border-radius: 26px;
+	border: 1px solid #D4D3E8;
+	text-transform: uppercase;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	color: #4C489D;
+	box-shadow: 0px 2px 2px #5C5696;
+	cursor: pointer;
+	transition: .2s;
+	margin-bottom: -10px;
+}
+
+.log_reg__submit:active,
+.log_reg__submit:focus,
+.log_reg__submit:hover {
+	border-color: #6A679E;
+	outline: none;
+}
+
+.inscription-login p {
+	text-align: center;
+	color: #fff;
+	margin-top: 20px;
+}
+
+.inscription-login a {
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.inscription-login p a:hover {
+	text-decoration: underline;
+}
