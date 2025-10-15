@@ -5,8 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="images/logo.ico">
-    <link rel="stylesheet" href="css/main.css">
     <title>Rethro Pi | Home</title>
+    <style>
+    .navbar {
+        background-color: #0ba6ff;
+        padding: 13px;
+        display: flex;
+        color: white;
+        margin: -8px;
+    }
+
+    .navbar a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        position: relative;
+    }
+
+    .navbar a i {
+        font-size: 20px;
+        transition: transform 0.2s;
+    }
+
+    .navbar a .hidden_text {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top: 25px;
+        left: 50%;
+        transform: translateX(-50%) scale(0.9);
+        transition: all 0.3s ease;
+        white-space: nowrap;
+    }
+
+    .navbar a:hover .hidden_text {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) scale(1);
+        text-decoration: underline;
+    }
+
+    .navbar a:hover i {
+        transform: scale(1.1);
+    }
+
+
+    .navbar .links {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        width: 50px;
+        height: auto;
+        margin: 10px;
+    }
+
+    .separateur img{
+        width: 117%;
+        margin: -10px;
+        margin-left: -49px;
+        margin-right: -49px;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .footer {
+        background-color: #0ba6ff;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        margin: -10px;
+    }
+    </style>
 </head>
 <body>
     <div class="navbar">
@@ -21,10 +101,29 @@
             <a href="login.php"><i class="fa-solid fa-user icon"></i> <span class="hidden_text">Connexion</span></a>
         </div>
     </div>
+    <div class="separateur">
+        <figure>
+            <img src="images/separateur_bleu.png" alt="">
+        </figure>
+    </div>
     <div class="main">
-        <div class="main_top">main_top</div>
-        <div class="Best_product">Best_product</div>
-        <div class="main_bottom">main_bottom</div>
+        <div class="main_top">
+            <h1>Bienvenue sur Rethro Pi !</h1>
+            <p>Rethro pi est une société spécialisée dans la vente de jeux et produits électroniques. <br>
+            Sur notre site officiel vous trouverez une large sélection de produits, des jeux vidéo aux accessoires électroniques. <br>
+            Ci-dessous vous trouverez nos produits phares du moment !</p>
+        </div>
+        <div class="Best_product">
+            <p>slider de 5-6 produits</p>
+        </div>
+        <div class="main_bottom">
+            <p>autre info</p>
+        </div>
+    </div>
+    <div class="separateur">
+        <figure>
+            <img src="images/separateur_bleu_botom.png" alt="">
+        </figure>
     </div>
     <div class="footer">
         <p>&copy; 2025-2026 Rethro Pi. Tous droits réservés.</p>
