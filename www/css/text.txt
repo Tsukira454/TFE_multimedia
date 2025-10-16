@@ -1,2 +1,0 @@
-Tout le css a été déplacé dans les page html ou php a cause du serve alwaysdata
-qui n'arrivait pas a prendre le css des fichié malgré le bon chemain écrit.

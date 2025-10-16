@@ -1,4 +1,9 @@
 <?php
+session_start();
+if(isset($_SESSION['userID'])) {
+    header('Location: ../index.php');
+    exit();
+}
 if(isset($_POST['nom'])) {
     // Valider le formulaire
     $nom = htmlspecialchars($_POST['nom']);
@@ -10,9 +15,8 @@ if(isset($_POST['nom'])) {
     try {
         if(!filter_var($email, FILTER_VALIDATE_EMAIL)) throw new Exception("Email invalide");
         require_once(__DIR__ . "/dbConnect.php");
-        
         // Créer l'utilisateur
-        $request = $dbEpidore->prepare("INSERT INTO clients (prenom, nom, email, pseudo, mdp) VALUES(:prenom, :nom, :email, :pseudo, :mdp)");
+        $request = $dbEpidore->prepare("INSERT INTO utilisateurs (prenom, nom, email, pseudo, mdp) VALUES(:prenom, :nom, :email, :pseudo, :mdp)");
         $request->execute(array(
             ":prenom" => $prenom,
             ":nom" => $nom,
@@ -20,12 +24,11 @@ if(isset($_POST['nom'])) {
             ":pseudo" => $pseudo,
             ":mdp" => $password
         ));
-        
         // Redirection après inscription réussie
         header('Location: login.php');
         exit();
     } catch(Exception $e) {
-        $errorMessage = "Erreur lors de l'inscription, veuillez réessayer.";
+        $errorMessage = "Erreur lors de l'inscription, veuillez réessayer. $e";
     }
 }
 ?>

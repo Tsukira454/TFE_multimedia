@@ -1,6 +1,9 @@
 <?php
 session_start();
-
+if(isset($_SESSION['userID'])) {
+    header('Location: ../index.php');
+    exit();
+}
 if(isset($_POST['mail'])) {
     $email = htmlspecialchars($_POST['mail']);
     $password = hash('sha256', htmlspecialchars($_POST['mdp']));
@@ -14,10 +17,11 @@ if(isset($_POST['mail'])) {
     $results = $request->fetchAll();
 
     if(count($results) == 1) {
-        $_SESSION["userID"] = $results[0]['id'];
+        $_SESSION["userID"] = $results[0]['id_utilisateurs'];
         $_SESSION["email"] = $email;
         $_SESSION['nom'] = $results[0]['nom'];
         $_SESSION['prenom'] = $results[0]['prenom'];
+        $_SESSION['pseudo'] = $results[0]['pseudo'];
         header('Location: ../index.php');
         exit();
     } else {
@@ -32,7 +36,7 @@ if(isset($_POST['mail'])) {
   <meta charset="UTF-8">
   <title>Rethro Pi | Se connecter</title>
   <link rel="stylesheet" href="../css/style_log_reg.css">
-<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.2.0/css/all.css'>
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.2.0/css/all.css'>
   <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css'>
   <link rel="icon" href="../images/logo.png" sizes="32x32" type="image/png">
 </head>
@@ -50,11 +54,11 @@ if(isset($_POST['mail'])) {
         <form class="log_reg" method="post" action="">
             <div class="log_reg__field">
                 <i class="log_reg__icon fas fa-user"></i>
-                <input type="email" class="login__input" name="mail" placeholder="Pseudo / email" required value="">
+                <input type="email" class="log_reg__input" name="mail" placeholder="Pseudo / email" required value="">
             </div>
             <div class="log_reg__field">
                 <i class="log_reg__icon fas fa-lock"></i>
-                <input type="password" class="login__input" name="mdp" placeholder="Mots de passe" required>
+                <input type="password" class="log_reg__input" name="mdp" placeholder="Mots de passe" required>
             </div>
             <?php if(isset($errorMessage)) echo "<p class='error'>$errorMessage</p>"; ?>
             <button class="button log_reg__submit" type="submit">
